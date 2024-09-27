@@ -97,8 +97,19 @@ for i in tqdm(links):
     d = get_personagens_info(i)
     if d is not None:
         d["link"] = i
+        nome = i.strip("/").split("/")[-1].replace("-", " ").title()
+        d["nome"] = nome
         data.append(d)
 data
 
 #%%
+df = pd.DataFrame(data)
+df
 
+#%%
+
+df.to_parquet("dados_re.parquet", index=False)
+
+#%%
+df_new= pd.read_parquet("dados_re.parquet")
+df_new
