@@ -1,0 +1,13 @@
+#Criar chave ssh
+#Vai na raiz do projeto, abre uma janelinha do bash e digita isso:
+ssh-keygen -t ed25519 -C "paulocarlosfilho@gmail.com"
+
+#Depois dá um cat no arquivo que lhe é mostrado em "your public key has..."
+# ou você pode gerar esse comando:
+nano ~/.ssh/id_ed25519.pub   #Nota, para fazer isso você tem que abrir o Git Bash
+
+#copia e abre o site www.github.com/settings/ssh/new
+#Depois é so gerar uma nova chave
+
+Agora você so precisa abrir a pasta de trabalho no bash.
+
